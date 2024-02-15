@@ -17,9 +17,14 @@ function boxClick(boxId){
     }
     matchCircleClasses()
     matchCrossClasses()
+    console.log(i)
     i++
-    console.log(image)
     imageLists.removeAttribute('onclick')
+    if(i === 10){
+        gameOver()
+        i = 1;
+        document.getElementById('winer').innerText = "WOW bone fight"
+    }
 }
 
 
@@ -27,6 +32,7 @@ function gameOver(){
     setHiddenToAll()
     removeElementById('play-ground') 
     showElementById('result')
+    i = 0;
 }
 
 function playAgain(){
