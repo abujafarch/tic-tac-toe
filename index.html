@@ -1,11 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ae1eb9a664.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    
+    <main class="flex justify-center items-center min-h-screen bg-[#0e081f]">
+        <section id="home" class="flex flex-col justify-center items-center space-y-8">
+            <h1 class="text-5xl text-white font-semibold font-bunge">SUPER TIC TAC TOE</h1>
+            <img class="w-[300px]" src="images/unnamed.png">
+            <button onclick="playNow()" class="bg-[#df5e37] px-6 py-3 font-semibold text-white text-xl rounded-md hover:bg-[#d15241]"><i class="fa-solid fa-play"></i> Play Now</button>
+        </section>
+        <section id="play-ground" class="hidden">
+            <div id="sobarAbba" class="grid grid-cols-3 gap-2 w-[184px] h-[184px]">
+                <div onclick="box1()" id="box1" class="flex justify-center items-center cursor-pointer w-14 h-14 bg-[#8686863f] rounded-md">
+                    <img  id="circle-1" class="hidden w-[80%]" src="images/circle.png">
+                    <img  id="cross-1" class="hidden w-[75%]" src="images/cross.png">
+                </div>
+
+                <div onclick="box2()" id="box2" class="flex justify-center items-center cursor-pointer w-14 h-14 bg-[#8686863f] rounded-md">
+                    <img  id="circle-2" class="hidden w-[80%]" src="images/circle.png">
+                    <img  id="cross-2" class="hidden w-[75%]" src="images/cross.png">
+                </div>
+
+                <div onclick="box3()" id="box3" class="flex justify-center items-center cursor-pointer w-14 h-14 bg-[#8686863f] rounded-md">
+                    <img  id="circle-3" class="hidden w-[80%]" src="images/circle.png">
+                    <img  id="cross-3" class="hidden w-[75%]" src="images/cross.png">
+                </div>
+
+                <div onclick="box4()" id="box4" class="flex justify-center items-center cursor-pointer w-14 h-14 bg-[#8686863f] rounded-md">
+                    <img  id="circle-4" class="hidden w-[80%]" src="images/circle.png">
+                    <img  id="cross-4" class="hidden w-[75%]" src="images/cross.png">
+                </div>
+
+                <div onclick="box5()" id="box5" class="flex justify-center items-center cursor-pointer w-14 h-14 bg-[#8686863f] rounded-md">
+                    <img  id="circle-5" class="hidden w-[80%]" src="images/circle.png">
+                    <img  id="cross-5" class="hidden w-[75%]" src="images/cross.png">
+                </div>
+
+                <div onclick="box6()" id="box6" class="flex justify-center items-center cursor-pointer w-14 h-14 bg-[#8686863f] rounded-md">
+                    <img  id="circle-6" class="hidden w-[80%]" src="images/circle.png">
+                    <img  id="cross-6" class="hidden w-[75%]" src="images/cross.png">
+                </div>
+
+                <div onclick="box7()" id="box7" class="flex justify-center items-center cursor-pointer w-14 h-14 bg-[#8686863f] rounded-md">
+                    <img  id="circle-7" class="hidden w-[80%]" src="images/circle.png">
+                    <img  id="cross-7" class="hidden w-[75%]" src="images/cross.png">
+                </div>
+
+                <div onclick="box8()" id="box8" class="flex justify-center items-center cursor-pointer w-14 h-14 bg-[#8686863f] rounded-md">
+                    <img  id="circle-8" class="hidden w-[80%]" src="images/circle.png">
+                    <img  id="cross-8" class="hidden w-[75%]" src="images/cross.png">
+                </div>
+
+                <div onclick="box9()" id="box9" class="flex justify-center items-center cursor-pointer w-14 h-14 bg-[#8686863f] rounded-md">
+                    <img  id="circle-9" class="hidden w-[80%]" src="images/circle.png">
+                    <img  id="cross-9" class="hidden w-[75%]" src="images/cross.png">
+                </div>
+            </div>
+        </section>
+        <section id="result" class="hidden">
+            <div class="p-10 bg-[#b6b6b611] border-2 border-[#b6b6b631] rounded-lg text-center space-y-3">
+                <h1 class="text-4xl text-white font-semibold poppins-font">Game Over</h1>
+                <h2 id="winer" class="text-2xl text-white font-semibold poppins-font">Player 2 Win</h2>
+                <button onclick="playAgain()" class="bg-[#df5e37] px-3 py-3 font-semibold text-white rounded-md hover:bg-[#d15241]"><i class="fa-solid fa-rotate-left"></i> Play Again</button>
+            </div>
+        </section>
+    </main>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/primary.js"></script>
 </body>
+
 </html>
